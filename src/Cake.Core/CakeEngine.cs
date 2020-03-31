@@ -367,6 +367,8 @@ namespace Cake.Core
                 }
 
                 PerformTaskTeardown(context, strategy, task, stopWatch.Elapsed, false, taskException);
+
+                _log.Verbose($"Completed in {stopWatch.Elapsed}");
             }
 
             // Add the task results to the report
